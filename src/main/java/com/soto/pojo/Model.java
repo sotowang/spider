@@ -1,40 +1,40 @@
 package com.soto.pojo;
 
 public class Model {
-    private String bookId;
-    private String bookName;
-    private String bookPrice;
+    private String modelId;
+    private String modelName;
+    private String modelPrice;
 
-    public String getBookId() {
-        return bookId;
+    public String getmodelId() {
+        return modelId;
     }
 
-    public void setBookId(String bookId) {
-        this.bookId = bookId;
+    public void setmodelId(String modelId) {
+        this.modelId = modelId;
     }
 
-    public String getBookName() {
-        return bookName;
+    public String getmodelName() {
+        return modelName;
     }
 
-    public void setBookName(String bookName) {
-        this.bookName = bookName;
+    public void setmodelName(String modelName) {
+        this.modelName = modelName;
     }
 
-    public String getBookPrice() {
-        return bookPrice;
+    public String getmodelPrice() {
+        return modelPrice;
     }
 
-    public void setBookPrice(String bookPrice) {
-        this.bookPrice = bookPrice;
+    public void setmodelPrice(String modelPrice) {
+        this.modelPrice = modelPrice;
     }
 
     @Override
     public String toString() {
         return "Model{" +
-                "bookId='" + bookId + '\'' +
-                ", bookName='" + bookName + '\'' +
-                ", bookPrice='" + bookPrice + '\'' +
+                "modelId='" + modelId + '\'' +
+                ", modelName='" + modelName + '\'' +
+                ", modelPrice='" + modelPrice + '\'' +
                 '}';
     }
 }

@@ -17,14 +17,14 @@ public class JDParse {
         //获取html标签内容
         Elements elements = document.select("ul[class=gl-warp clearfix]").select("li[class=gl-item]");
         for (Element element : elements) {
-            String bookId = element.attr("data-sku");
-            String bookPrice = element.select("div[class=p-price]").select("strong").select("i").text();
-            String bookName = element.select("div[class=p-name p-name-type-2]").select("em").text();
+            String modelId = element.attr("data-sku");
+            String modelPrice = element.select("div[class=p-price]").select("strong").select("i").text();
+            String modelName = element.select("div[class=p-name p-name-type-2]").select("em").text();
 
             Model model = new Model();
-            model.setBookId(bookId);
-            model.setBookName(bookName);
-            model.setBookPrice(bookPrice);
+            model.setmodelId(modelId);
+            model.setmodelName(modelName);
+            model.setmodelPrice(modelPrice);
 
             modelList.add(model);
         }

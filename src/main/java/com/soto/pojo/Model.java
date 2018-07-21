@@ -28,4 +28,13 @@ public class Model {
     public void setBookPrice(String bookPrice) {
         this.bookPrice = bookPrice;
     }
+
+    @Override
+    public String toString() {
+        return "Model{" +
+                "bookId='" + bookId + '\'' +
+                ", bookName='" + bookName + '\'' +
+                ", bookPrice='" + bookPrice + '\'' +
+                '}';
+    }
 }

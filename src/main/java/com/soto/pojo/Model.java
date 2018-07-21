@@ -1,6 +1,6 @@
 package com.soto.pojo;
 
-public class Book {
+public class Model {
     private String bookId;
     private String bookName;
     private String bookPrice;

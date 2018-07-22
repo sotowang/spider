@@ -26,16 +26,16 @@ public class JDParse {
         Elements elements = document.select("ul[class=gl-warp clearfix]").select("li[class=gl-item]");
         for (Element element : elements) {
             String modelId = element.attr("data-sku");
-            String modelPrice = element.select("div[class=p-price]").select("strong").select("i").text();
-            String modelName = element.select("div[class=p-name p-name-type-2]").select("em").text();
-            String modelDesc = element.select("div[class=p-name p-name-type-2]").select("i.promo-words").text();
-            String modelCount = element.select("div[class=p-icons]").select("i").text();
-            String modelComment = element.select("div[class=p-commit]").select("strong").select("a").text();
-            String modelAddr = element.select("div[class=p-img]").select("a").attr("href");
+            String modelPrice = element.select("div.p-price").select("strong").select("i").text();
+            String modelName = element.select("div.p-name").select("em").text();
+            String modelDesc = element.select("div.p-name").select("i.promo-words").text();
+            String modelCount = element.select("div.p-icons").select("i").text();
+            String modelComment = element.select("div.p-commit").select("strong").select("a").text();
+            String modelAddr = element.select("div.p-img").select("a").attr("href");
             modelAddr = modelAddr.startsWith("http") ? modelAddr : "http:" + modelAddr;
-            String modelShop = element.select("div[class=p-shop]").select("span").select("a").text();
+            String modelShop = element.select("div[data-reputation]").select("a").attr("title");
 
-            String modelImg = element.select("div[class=p-img]").select("img[src]").attr("src");
+            String modelImg = element.select("div.p-img").select("a").select("img").attr("src");
 
             Model model = new Model();
             model.setmodelId(modelId);

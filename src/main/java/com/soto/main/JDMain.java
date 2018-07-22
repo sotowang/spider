@@ -16,6 +16,7 @@ public class JDMain {
         //初始化httpclient
 //        String url = "https://search.jd.com/Search?keyword=java&enc=utf-8&wq=java&pvid=5fe9d3c5a18a4c4f93fd193c64fa9fd0";
         String url = "https://search.jd.com/Search?keyword=java&enc=utf-8&qrst=1&rt=1&stop=1&vt=2&wq=java&page=3&s=58&click=0";
+
         List<Model> modelList = HttpParse.HttpParser(url);
         for (Model md : modelList) {
             logger.info(md.toString());

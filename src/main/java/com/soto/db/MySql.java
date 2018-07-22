@@ -19,14 +19,20 @@ public class MySql {
         }
     }
     public static void insert(List<Model> modelList) throws SQLException {
-        Object[][] params = new Object[modelList.size()][3];
+        Object[][] params = new Object[modelList.size()][9];
         for (int i = 0; i < params.length; i++) {
             params[i][0] = modelList.get(i).getmodelId();
             params[i][1] = modelList.get(i).getmodelName();
             params[i][2] = modelList.get(i).getmodelPrice();
+            params[i][3] = modelList.get(i).getModelDesc();
+            params[i][4] = modelList.get(i).getModelImg();
+            params[i][5] = modelList.get(i).getModelShop();
+            params[i][6] = modelList.get(i).getModelCount();
+            params[i][7] = modelList.get(i).getModelComment();
+            params[i][8] = modelList.get(i).getModelAddr();
         }
-        queryRunner.batch("insert into jd_book (book_id, book_name, book_price)"
-                + "values (?,?,?)", params);
+        queryRunner.batch("insert ignore into jd_book (book_id, book_name, book_price, book_desc,book_img, book_shop, book_count, book_comment, book_addr)"
+                + "values (?,?,?,?,?,?,?,?,?)", params);
         System.out.println("执行数据库完毕！"+"成功插入数据："+modelList.size()+"条");
     }
 
